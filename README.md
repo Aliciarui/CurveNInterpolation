@@ -9,7 +9,7 @@ This program implements Cardinal spline curve generation, curve animation and in
 
 #### Final interface style
 
-![13](D:\CurveNInterpolation\pic\13.png)
+![13](http://github.com/Aliciarui/repository CurveNInterpolation/raw/main master/pic/13.png)
 
 
 
