@@ -1,0 +1,28 @@
+#ifndef SPLINE_H
+#define SPLINE_H
+
+class dot
+{
+public:
+    double x;
+    double y;
+    void setdot(double my_x,double my_y);   
+};
+
+
+class spline
+{
+private:
+    dot* knots;
+    dot* Spline;
+    int grain;
+    int n;
+    int count;
+    float tension;
+    
+public:
+    spline();
+    
+};
+
+#endif // SPLINE_H
