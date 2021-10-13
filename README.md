@@ -89,7 +89,7 @@ This program implements Cardinal spline curve generation, curve animation and in
 - ##### Animation
 
   The goal is to move the picture of the sphere along the direction of the spline curve and rotate the picture according to the slope.
-  ![9](D:\CurveNInterpolation\pic\9.png)(sphere)
+  ![9](/pic/9.png)(sphere)
   Use getSlope() to obtain the slope of the curve, and use QTimer to obtain the characteristic point information of the curve at a fixed time frequency to change the position of the picture.
 
   ![10](/pic/10.png)
