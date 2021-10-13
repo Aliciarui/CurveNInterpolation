@@ -76,7 +76,7 @@ This program implements Cardinal spline curve generation, curve animation and in
 
   Establish the Interpolation class and perform two interpolation calculations.
 
-  ![8](D:\CurveNInterpolation\pic\8.png)
+  ![8](/pic/8.png)
 
   Store the intermediate image information in the result container, call QTimer to obtain the interpolated image at a fixed frequency, and draw it on the screen.
 
