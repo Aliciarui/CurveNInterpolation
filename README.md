@@ -9,7 +9,7 @@ This program implements Cardinal spline curve generation, curve animation and in
 
 #### Final interface style
 
-![image-20211013131051344](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013131051344.png)
+![13](D:\CurveNInterpolation\pic\13.png)
 
 
 
@@ -19,7 +19,7 @@ This program implements Cardinal spline curve generation, curve animation and in
 
   If you need to understand the Cardinal curve, you first need to understand the principle of the Hermite curve.
 
-  ![image-20211013125206738](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013125206738.png)
+  ![1](D:\CurveNInterpolation\pic\1.png)
 
   (Hermite curve)
 
@@ -35,25 +35,25 @@ This program implements Cardinal spline curve generation, curve animation and in
   this is a two-dimensional parameter system equation.
   So what we have to do is to find this P(u)
 
-  ![image-20211013125335957](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013125335957.png)
+  ![2](D:\CurveNInterpolation\pic\2.png)
 
   Four different types of curves represent different slopes. 
 
   Multiply it with the slope to get the expression of P(u)
 
-  ![image-20211013125418620](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013125418620.png)
+  ![3](D:\CurveNInterpolation\pic\3.png)
 
 - ##### Cardinal curve
 
   Cardinal curve adds slope calculations to its formula when compared to Hermite curve.
 
-  ![image-20211013125549225](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013125549225.png)
+  ![4](D:\CurveNInterpolation\pic\4.png)
 
 - ##### Interpolation
 
   Interpolation algorithms include linear interpolation and vector linear interpolation. Linear interpolation: perform linear interpolation on the coordinates Pi of each point on the initial and final shapes to obtain the intermediate shape of the object deformation; vector linear interpolation: calculate the corresponding length Li and angle for every two adjacent points on the initial and final shapes θ i, then linearly interpolate Li and θ i to obtain the intermediate length and angle, and sequentially connect the defined vectors after interpolation to obtain the intermediate change shape.
 
-  ![image-20211013130147900](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013130147900.png)
+  ![7](D:\CurveNInterpolation\pic\7.png)
 
   
 
@@ -65,9 +65,9 @@ This program implements Cardinal spline curve generation, curve animation and in
 
   Through GetCardinalMatrix(), combined with the value of tension, the matrix M is generated. Then through the value of Matrix() and grain, the corresponding interpolation point is generated, and the interpolation point information is stored in the Spline array.
 
-  ![image-20211013125737512](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013125737512.png)
+  ![5](D:\CurveNInterpolation\pic\5.png)
 
-  ![image-20211013125745907](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013125745907.png)
+  ![6](D:\CurveNInterpolation\pic\6.png)
 
   (For the specific code, please refer to the source file)
 
@@ -75,7 +75,7 @@ This program implements Cardinal spline curve generation, curve animation and in
 
   Establish the Interpolation class and perform two interpolation calculations.
 
-  ![image-20211013130410828](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013130410828.png)
+  ![8](D:\CurveNInterpolation\pic\8.png)
 
   Store the intermediate image information in the result container, call QTimer to obtain the interpolated image at a fixed frequency, and draw it on the screen.
 
@@ -88,12 +88,12 @@ This program implements Cardinal spline curve generation, curve animation and in
 - ##### Animation
 
   The goal is to move the picture of the sphere along the direction of the spline curve and rotate the picture according to the slope.
-  ![image-20211013130617133](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013130617133.png)(sphere)
+  ![9](D:\CurveNInterpolation\pic\9.png)(sphere)
   Use getSlope() to obtain the slope of the curve, and use QTimer to obtain the characteristic point information of the curve at a fixed time frequency to change the position of the picture.
 
-  ![image-20211013130647649](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013130647649.png)
+  ![10](D:\CurveNInterpolation\pic\10.png)
 
-  ![image-20211013130656363](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013130656363.png)
+  ![11](D:\CurveNInterpolation\pic\11.png)
 
   The image size is fixed at 50*50. The translate function is called to change the center position of the image. In order to make the sphere rotate smoothly without flipping, use judgesymbol() to determine the positive and negative relationship between the two double variables to ensure that each call is compared to the previous one. The symbol does not change.
 
@@ -101,7 +101,7 @@ This program implements Cardinal spline curve generation, curve animation and in
 
 #### Interface and Button
 
-![image-20211013130811252](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013130811252.png)
+![12](D:\CurveNInterpolation\pic\12.png)
 
 - click to change "grain" and "tension"
 
@@ -117,25 +117,25 @@ This program implements Cardinal spline curve generation, curve animation and in
 
 - click to create dots
 
-  <img src="C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013131126072.png" alt="image-20211013131126072" style="zoom:67%;" />
+  ![14](D:\CurveNInterpolation\pic\14.png)
 
 - show spline(unlock buttons)
 
-  <img src="C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013131259937.png" alt="image-20211013131259937" style="zoom:67%;" />
+  ![15](D:\CurveNInterpolation\pic\15.png)
 
 - choose to show interpolation points
 
-  <img src="C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013131328194.png" alt="image-20211013131328194" style="zoom:67%;" />
+  ![16](D:\CurveNInterpolation\pic\16.png)
 
 - move and rotate the ball
 
-  <img src="C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013131348876.png" alt="image-20211013131348876" style="zoom:67%;" />
+  ![17](D:\CurveNInterpolation\pic\17.png)
 
 - linear interpolation
 
-  ![image-20211013131509818](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013131509818.png)
+  ![18](D:\CurveNInterpolation\pic\18.png)
 
 - vector interpolation
 
-  ![image-20211013131529486](C:\Users\ruiqi\AppData\Roaming\Typora\typora-user-images\image-20211013131529486.png)
+  ![19](D:\CurveNInterpolation\pic\19.png)
 
